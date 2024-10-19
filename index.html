@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGULAR EXPRESSIONS MATCH</title>
+    <style>
+        /* body {
+            box-sizing: border-box;
+            flex-direction: column;
+
+        } */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+            
+
+        /* .container {
+            background-color: #333333;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 20px;
+        } */
+
+        .interface {
+            width: 45%;
+            padding: 25px;
+            margin-left: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            color: #4b090d;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #4b090d;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #4b090d;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        form {
+            background-color: rgb(197, 193, 193);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(155, 153, 153, 0.1);
+        }
+
+        label {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #4b090d;
+        }
+
+        input[type='text'],
+        input[type='email'],
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            border: 1px solid #a09d9d;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type='submit'] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%
+        }
+
+        input[type='submit']:hover {
+            background-color: #45a049
+        }
+    </style>
+</head>
+</head>
+
+<body>
+
+    <!-- <div class="container"> -->
+        <div class="interface">
+            <h1>REGEX MATCHER</h1>
+            <p>WELCOME TO REGEX MATCHER APP</p><br>
+            <p>THIS APPLICATION HELPS YOU FIND SPECIFIC PATTERNS IN THE TEXT YOU INPUT BY USING REGULAR EXPRESSIONS</p>
+
+
+            <form action="\results" method='POST'>
+                <label for="test_string">ENTER TEXT FOR PATTERN MATCHING</label><br>
+                <textarea name="test_string" rows="4" cols="50"></textarea><br>
+                <br>
+                <label for="regex_pattern">ENTER THE PATTERN YOU WANT TO CHECK THE MATCH FOR</label><br>
+                <input type="text" name="regex_pattern"><br>
+                <br>
+                <input type="submit" value="MATCH">
+            </form>
+            <br>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="interface">
+            <h2>EMAIL VALIDATION</h2>
+            <p style="text-align: center;">Are you sure your email address is valid?</p>
+
+            <form action="/validate-email" method="POST">
+                <label for="email">EMAIL ADDRESS</label><br>
+                <input type="email" name="email"><br>
+                <br>
+                <input type="submit" value="VALIDATE EMAIL">
+
+            </form>
+        </div>
+    <!-- </div> -->
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matches Found</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: #00796b;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        li {
+            font-size: 2rem;
+            line-height: 1.6;
+            padding: 10px;
+            background-color: #e0f2f1;
+            border: 1px solid #b2dfdb;
+            border-radius: 5px;
+            margin-bottom: 8px;
+            color: #004d40;
+            text-align: left;
+        }
+
+        p {
+            font-size: 2rem;
+            color: #555;
+            margin-top: 15px;
+            line-height: 1.5;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 2rem;
+            color: #00796b;
+            text-decoration: none;
+            padding: 8px 15px;
+            background-color: #b2dfdb;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background-color: #00796b;
+            color: #ffffff;
+        }
+
+        .info {
+            font-weight: bold;
+            color: #004d40;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Match Found</h1>
+        <ul>
+            {% for match in matches %}
+            <li>{{ match }}</li>
+            {% endfor %}
+        </ul>
+
+        <p><span class="info">Test String:</span> {{ test_string }}</p>
+        <p><span class="info">Regex Pattern:</span> {{ regex_pattern }}</p>
+        <p><span class="info">{{ num_matches }}</span> Match found.</p>
+
+        <a href="/">Go back</a>
+    </div>
+</body>
+
+</html>

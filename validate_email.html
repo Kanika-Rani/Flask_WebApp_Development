@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #2c2c2c;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #333333;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #e63946;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #f1faee;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #a8dadc;
+            margin: 10px 0;
+        }
+
+        .result {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #06d6a0;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .invalid {
+            color: #e63946;
+        }
+
+        hr {
+            border: 1px solid #a8dadc;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Email Validation</h1>
+        <hr>
+        <h2>Email Address:</h2>
+        <p>{{ email }}</p>
+        <hr>
+        <h2>Validation Result:</h2>
+        <p class="result {% if not is_valid_email %}invalid{% endif %}">
+            {% if is_valid_email %}
+            Valid
+            {% else %}
+            Invalid
+            {% endif %}
+        </p>
+    </div>
+</body>
+
+</html>
